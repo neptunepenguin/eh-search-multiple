@@ -18,6 +18,10 @@ clicked it becomes `> < Search Mode > <`.  By clicking the same button again
 you return to the normal tagging mode.  The state of the toggle is carried
 across different galleries and page reloads by means of local browser storage.
 
+![Example usage][1]
+
+[1]: https://raw.githubusercontent.com/neptunepenguin/eh-search-multiple/master/screencast.gif
+
 ### TODO
 
 *   Add an option to search by gallery category.  Maybe by including a checkbox

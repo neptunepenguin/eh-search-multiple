@@ -66,8 +66,8 @@ find this file, see <http://www.gnu.org/licenses/>.
     var text_search = document.createTextNode('> < Search Mode > <');
     var newt_field = document.querySelector('#newtagfield');
     var newt_button = document.querySelector('#newtagbutton');
-    var style_tag = 'color:#eeccee;font-size:1.2em;';
-    var style_search = 'color:#77ccee;font-size:1.2em;';
+    var style_tag = 'color:#aa9955;font-size:1.2em;';
+    var style_search = 'color:#33ccee;font-size:1.2em;';
     top_p.className = 'g2';
     top_a.style = style_tag;
     top_a.href = '#';
