@@ -2,9 +2,11 @@
 // @name        eh-search-multiple
 // @namespace   e-hentai
 // @description Select several tags in a gallery and a search for all of them
-// @include     http://g.e-hentai.org/g/*
+// @include     https://e-hentai.org/g/*
 // @include     https://exhentai.org/g/*
-// @version     0.2
+// @include     http://e-hentai.org/g/*
+// @include     http://g.e-hentai.org/g/*
+// @version     0.3
 // @grant       none
 // ==/UserScript==
 /*
