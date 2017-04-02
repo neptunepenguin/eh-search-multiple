@@ -6,7 +6,7 @@
 // @include     https://exhentai.org/g/*
 // @include     http://e-hentai.org/g/*
 // @include     http://g.e-hentai.org/g/*
-// @version     0.3
+// @version     0.4
 // @grant       none
 // ==/UserScript==
 /*
@@ -33,6 +33,11 @@ checkbox next to the category on the current gallery.
 KNOWN BUGS:  If you select a tag in tagging mode and then switch to search mode
 and back to tagging mode again, the tag selection will get messed up.
 Reloading the page (F5 or Ctrl+R) is a temporary fix.
+
+COMPATIBILITY NOTE: Since most of the gallery page is measured in pixels there
+is little space where placing new elements will not mangle the layout. To add
+more buttons (from other scripts) I suggests placing 'inline-block' buttons
+above the title, this way the buttons will line together above the title.
 
 @usage_end
 
@@ -61,21 +66,22 @@ find this file, see <http://www.gnu.org/licenses/>.
 
 (function () {
     var the_uuid = 'eh-search-multiple';
-    var right_pane = document.querySelector('#gd5');
+    var title_pane = document.querySelector('#gd2');
+    var title = document.querySelector('#gn');
     var top_p = document.createElement('p');
     var top_a = document.createElement('a');
     var text_tag = document.createTextNode('> < Tagging Mode > <');
     var text_search = document.createTextNode('> < Search Mode > <');
     var newt_field = document.querySelector('#newtagfield');
     var newt_button = document.querySelector('#newtagbutton');
-    var style_tag = 'color:#aa9955;font-size:1.2em;';
-    var style_search = 'color:#33ccee;font-size:1.2em;';
+    var style_tag = 'color:#aa9955;font-size:1.2em;display:inline-block;';
+    var style_search = 'color:#33ccee;font-size:1.2em;display:inline-block;';
     top_p.className = 'g2';
     top_a.style = style_tag;
     top_a.href = '#';
     top_a.appendChild(text_tag);
     top_p.appendChild(top_a);
-    right_pane.appendChild(top_p);
+    title_pane.insertBefore(top_p, title);
 
     /* Thankfully we can get the tag namespace from the id of the anchor.
      * Otherwise we would need to jump backwards through the parents' relations

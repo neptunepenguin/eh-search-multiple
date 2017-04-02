@@ -33,6 +33,12 @@ across different galleries and page reloads by means of local browser storage.
    to tagging mode again, the tag selection will get messed up.  Reloading the
 page (F5 or Ctrl+R) is a temporary fix.
 
+### Compatibility Note
+
+Since most of the gallery page is measured in pixels there is little space
+where placing new elements will not mangle the layout. To add more buttons
+(from other scripts) I suggests placing 'inline-block' buttons above the title,
+this way the buttons will line together above the title.
 
 ## Copyright
 
