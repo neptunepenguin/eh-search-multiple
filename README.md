@@ -3,42 +3,17 @@ eh-search-multiple - adds a search mode for gallery tags
 
 ## Usage
 
-The script (`eh-search-multiple.user.js`) adds a toggle button which can switch
+The script (eh-search-multiple.user.js) adds a toggle button which can switch
 into a search mode for tags.  In search mode, tagging is disabled and you can
 select multiple tags in the tag pane.  The tagging field is also changed, and
 it displays all tags that have been selected in the format used for tag
 searching.
 
 After selecting all desired tags you can edit the text field if needed and then
-click the new "Search!" button (that is placed instead of the `Tag!` button).
-The search is performed on the main page.
-
-The button to enter search mode is shown as `> < Tagging Mode > <`, and when
-clicked it becomes `> < Search Mode > <`.  By clicking the same button again
-you return to the normal tagging mode.  The state of the toggle is carried
+click the new "Search!" button (that is placed instead of the "Tag!" button).
+The search is performed on the main page.  The state of the toggle is carried
 across different galleries and page reloads by means of local browser storage.
 
-![Example usage][1]
-
-[1]: https://raw.githubusercontent.com/neptunepenguin/eh-search-multiple/master/screencast.gif
-
-### TODO
-
-*   Add an option to search by gallery category.  Maybe by including a checkbox
-   next to the category on the current gallery.
-
-### Known Bugs
-
-*   If you select a tag in tagging mode and then switch to search mode and back
-   to tagging mode again, the tag selection will get messed up.  Reloading the
-page (F5 or Ctrl+R) is a temporary fix.
-
-### Compatibility Note
-
-Since most of the gallery page is measured in pixels there is little space
-where placing new elements will not mangle the layout. To add more buttons
-(from other scripts) I suggests placing 'inline-block' buttons above the title,
-this way the buttons will line together above the title.
 
 ## Copyright
 
