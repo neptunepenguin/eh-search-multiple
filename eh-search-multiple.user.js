@@ -5,7 +5,7 @@
 // @include     https://e-hentai.org/g/*
 // @include     https://exhentai.org/g/*
 // @include     http://e-hentai.org/g/*
-// @version     0.5
+// @version     0.6
 // @grant       none
 // ==/UserScript==
 /*
@@ -57,9 +57,9 @@ find this file, see <http://www.gnu.org/licenses/>.
       return panel;
     }
     var panel = document.createElement("div");
-    var style = "opacity:0.7;position:fixed;z-index:100;top:0;left:0;";
+    var style = "position:fixed;z-index:100;top:0;left:0;";
     style += "padding:20px;border-radius:3px;border:2px solid white;";
-    style += "text-align:left;font-size:10pt;background:white;";
+    style += "text-align:left;font-size:10pt;";
     panel.style = style;
     panel.setAttribute("id", panelId);
     document.body.appendChild(panel);
@@ -182,8 +182,8 @@ find this file, see <http://www.gnu.org/licenses/>.
   cats.style.display = "none";
   for (var [k, v] of catValues.entries()) {
     var div = document.createElement("div");
-    var style = "color:sienna;font-size:1.2em;float:left;";
-    style += "cursor:pointer;padding:2px;border:1px solid sienna;";
+    var style = "font-size:1.2em;float:left;";
+    style += "cursor:pointer;padding:2px;border:1px solid;";
     style += "border-radius:5px;margin:1px;fon";
     div.style = style;
     var text = document.createTextNode(k);
